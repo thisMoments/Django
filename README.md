@@ -13,8 +13,10 @@
 
 - 进入虚拟环境  source bin/activate
 
-               pip freeze
-               pip install mymysql
+     pip freeze
+     
+     pip install mymysql
+     
   退出虚拟环境  deactivate
 
 - 安装Django  pip install django==1.11
@@ -28,12 +30,17 @@
 - 创建app python manage.py startapp appname
   
   admin.py - 管理后台祖册模型
+  
   apps.py - settings.py里面注册qpp的时候需要用到，一般不推荐这样使用
+  
     from app.apps import AppConfig
+    
     AppConfig.name
+    
   models.py - 写模型的地方
+  
   views.py - 写处理业务逻辑的地方
 
 - 迁移数据库 python manage.py makemigrations
 
-          python manage.py migrate
+     python manage.py migrate
