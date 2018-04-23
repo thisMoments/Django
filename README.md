@@ -25,7 +25,7 @@
 
 - 启动Django项目 python manage.py runserver ip:端口号(如果不填写，默认端口号为8000)
   
-  （这时候在浏览器新建窗口，打开服务器地址，页面显示it worked即表示启动项目成功）
+  （这时候在浏览器新建窗口，输入服务器ip地址及端口号，页面显示it worked即表示启动项目成功）
   
 - 创建app python manage.py startapp appname
   
