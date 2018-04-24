@@ -1,4 +1,5 @@
-# Django
+# Django基础知识
+
 - Django的模式简称MVT(model view template)模式，本质上和MVC(model view control)没什么区别。
     
     Model（模型）表示应用程序核心（比如数据库记录列表）。
@@ -31,7 +32,9 @@
   
   admin.py - 管理后台祖册模型
   
-  apps.py - settings.py里面注册qpp的时候需要用到，一般不推荐这样使用
+  apps.py - 模块
+  
+- settings.py 配置信息位置，注册qpp的时候需要用到，一般不推荐这样使用
   
     from app.apps import AppConfig
     
