@@ -32,9 +32,9 @@
   
   admin.py - 管理后台祖册模型
   
-  apps.py - 模块
+  settings.py 配置信息位置，注册qpp的时候需要用到，一般不推荐这样使用
   
-- settings.py 配置信息位置，注册qpp的时候需要用到，一般不推荐这样使用
+  apps.py - 模块
   
     from app.apps import AppConfig
     
