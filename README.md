@@ -161,3 +161,35 @@
       
 - 过滤器 （|） 在变量显示前修改
 
+      date 年: y 两年 Y 四年
+           月: m
+           日: d
+           时: h 12小时制 H 24小时制
+           分: m
+           秒: s
+           
+- 注释 {# #}
+ 
+       {% comment %}
+       {% endcomment %}
+       
+- 大小写 uper lower
+
+- {% url'namespace:name' value %}
+
+      工程中url定义namespace
+      模块appurl中定义name
+      
+- 请求
+
+      post 提交数据影藏了
+      get  提交数据在url上
+      put  更新全部数据
+      patch 更新局部数据
+      delete 删除
+      
+- form
+
+      <input type='text'>
+      <input type='date'>
+      <input type='files'>
