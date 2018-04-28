@@ -24,13 +24,19 @@
   
 - 创建app python manage.py startapp appname
   
-      admin.py - 管理后台祖册模型
+      admin.py - 管理后台注册模型
       settings.py 配置信息位置，注册qpp的时候需要用到，一般不推荐这样使用
       apps.py - 模块
         from app.apps import AppConfig
         AppConfig.name
-      models.py - 写模型的地方
+      models.py - 写模型的地方，与数据库操作相关，存入或读取数据时用到这个
       views.py - 写处理业务逻辑的地方
+      urls.py - 网址入口，关联到对应的views.py中的一个函数（或者generic类），访问网址就对应一个函数
+        Django url() 可以接收四个参数，分别是两个必选参数：regex、view 和两个可选参数：kwargs、name
+          regex: 正则表达式，与之匹配的 URL 会执行对应的第二个参数 view
+          view: 用于执行与正则表达式匹配的 URL 请求
+          kwargs: 视图使用的字典类型的参数
+          name: 用来反向获取 URL
 
 - 迁移数据库 
 
@@ -43,7 +49,7 @@
 - 创建超级用户 python manage.py createsuperuser
 
       admin(用户)
-      xxx@xx.com(邮箱)
+      xxx@xx.com(邮箱，可以随意填写)
       admin1234(密码)
 
       python manage.py makemigrations(重启项目)
@@ -91,9 +97,9 @@
 
 - objects对象 通过模型.objects来实现数据的CRUD操作
 
-- 获取所有 select * from xxxx
-
-  模型.bojects.all()
+      相当于SQL中的select
+      获取所有 select * from xxxx
+      模型.bojects.all()
   
 - 获取信息 filter(过滤条件) get(过滤条件)
 
@@ -182,7 +188,7 @@
       
 - 请求
 
-      post 提交数据影藏了
+      post 提交数据隐藏了
       get  提交数据在url上
       put  更新全部数据
       patch 更新局部数据
@@ -193,3 +199,22 @@
       <input type='text'>
       <input type='date'>
       <input type='files'>
+
+#### Request 对象
+
+- 每个 view 函数的第一个参数是一个 HttpRequest 对象
+
+  HttpRequest对象包含当前请求URL的一些信息：
+  
+      path 请求页面的全路径,不包括域名
+      method 请求中使用的HTTP方法的字符串表示，全大写表示
+      GET 包含所有HTTP GET参数的类字典对象
+      POST 包含所有HTTP POST参数的类字典对象
+      REQUEST POST和GET属性的集合体，但是有特殊性，先查找POST属性，然后再查找GET属性
+      COOKIES 包含所有cookies的标准Python字典对象，Keys和values都是字符串
+      FILES  包含所有上传文件的类字典对象。FILES中的每个Key都是<input type="file" name="" />标签中name属性的值. FILES中的每个value 同时也是一个标准Python字典对象，包含下面三个Keys:
+          filename: 上传文件名,用Python字符串表示
+          content-type: 上传文件的Content type
+          content: 上传文件的原始内容
+      META 包含所有可用HTTP头部信息的字典
+      user 是一个django.contrib.auth.models.User 对象，代表当前登录的用户
