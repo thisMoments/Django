@@ -7,8 +7,7 @@
       Controller（控制器）处理输入（写入数据库记录）
       Template(模板) 把页面展示给用户
       
-
-![mvt简单图解](https://img-blog.csdn.net/2018050310585556?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNzY3OTMw/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+      ![mvt简单图解](https://img-blog.csdn.net/2018050310585556?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNzY3OTMw/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
 
 - 安装虚拟环境(命令提示符)  pip install virtualenv
 
