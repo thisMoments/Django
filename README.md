@@ -5,6 +5,7 @@
       Model（模型）表示应用程序核心（比如数据库记录列表）
       View（视图）显示数据（数据库记录）
       Controller（控制器）处理输入（写入数据库记录）
+      Template(模板) 把页面展示给用户
 
 - 安装虚拟环境(命令提示符)  pip install virtualenv
 
