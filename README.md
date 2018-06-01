@@ -238,3 +238,4 @@
        服务器在运行时可以为每一个用户的浏览器创建一个其独享的session对象，由于session为用户浏览器独享，所以用户在访问服务器的web资源时，
        可以把各自的数据放在各自的session中，当用户再去访问服务器中的其它web资源时，其它web资源再从用户各自的session中取出数据为用户服务。
 
+详细阅读：[Django官方文档](https://docs.djangoproject.com/zh-hans/2.0/)
